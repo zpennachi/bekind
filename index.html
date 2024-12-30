@@ -1,0 +1,25 @@
+
+  <div class="container">
+    <!-- Logo -->
+    <div class="top-left">
+      <img src="logo.png" alt="Logo" class="logo">
+    </div>
+
+<model-viewer src="https://uploads-ssl.webflow.com/64f5d91cdf7028173fc31b4f/6650d57cfebe58fb480532d2_4up.glb.txt" id=model-viewer ar poster="https://uploads-ssl.webflow.com/64f5d91cdf7028173fc31b4f/6650d6ccfdb22ece13f5d46f_Screenshot%202024-05-24%20140155%201-min.png" ar-modes="webxr scene-viewer quick-look"  camera-controls  auto-rotate interaction-prompt="none" min-field-of-view="16deg" interpolation-decay="300" max-field-of-view="16deg" >
+ <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+
+</model-viewer>
+    
+    <!-- Footer -->
+    <div class="bottom-left">
+      <p class="email"><a href="mailto:your-email@example.com">hi@zpennachi.com</a></p>
+      <p class="quote">lets build something fun together :)</p>
+    </div>
+  </div>
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
