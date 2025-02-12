@@ -1,0 +1,328 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Case Study - Snowball AR Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Doto:wght@100..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: "Anonymous Pro", serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+section {
+  margin-bottom: 64px;
+}
+
+.sub-section {
+  margin-bottom: 64px;
+}
+        .anonymous-pro-regular {
+            font-family: "Anonymous Pro", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .anonymous-pro-bold {
+            font-family: "Anonymous Pro", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+        .anonymous-pro-regular-italic {
+            font-family: "Anonymous Pro", serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+        .anonymous-pro-bold-italic {
+            font-family: "Anonymous Pro", serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+        .silkscreen-regular {
+            font-family: "Doto", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .silkscreen-bold {
+            font-family: "Doto", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .section {
+            padding: 60px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-family: "Silkscreen", serif;
+        }
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-family: "doto", serif;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 20px 0;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        img.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        blockquote {
+            font-size: 1.2rem;
+            font-style: italic;
+            background: #e0e0e0;
+            padding: 20px;
+            border-left: 5px solid #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            font-size: 1rem;
+           
+        }
+        pre {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            overflow-x: auto;
+            border-radius: 5px;
+        }
+.doto-<uniquifier> {
+  font-family: "Doto", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 0;
+}
+
+
+#more-work {
+    background-color: #fff;
+    text-align: center;
+    padding: 60px 10%;
+}
+
+#more-work h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: "Silkscreen", serif;
+}
+
+#more-work p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.case-studies {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.case-study-link {
+    text-decoration: none;
+    color: inherit;
+    width: 250px;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-study-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.case-study h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: "Doto", serif;
+}
+
+.case-study p {
+    font-size: 1rem;
+    color: #777;
+}
+</style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll(".section");
+            const images = document.querySelectorAll("img");
+            
+            function revealOnScroll() {
+                sections.forEach(section => {
+                    if (section.getBoundingClientRect().top < window.innerHeight * 0.85) {
+                        section.classList.add("visible");
+                    }
+                });
+                images.forEach(img => {
+                    if (img.getBoundingClientRect().top < window.innerHeight * 0.85) {
+                        img.classList.add("visible");
+                    }
+                });
+            }
+            
+            revealOnScroll();
+            window.addEventListener("scroll", revealOnScroll);
+        });
+    </script>
+</head>
+<body>
+
+    <section id="context" class="section">
+       <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/redone_placeholder-fullspan-min.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMvcmVkb25lX3BsYWNlaG9sZGVyLWZ1bGxzcGFuLW1pbi5qcGciLCJpYXQiOjE3MzkzOTAxMzksImV4cCI6MTc3MDkyNjEzOX0.5ThCL-NE9K9pkX7YkVU0CAuqXxJ0eVf12dTs60JmjVg" alt="Experience Flow">
+        <h2>🎬 Snowball AR: Shoot Snowmen with Lasers in Your Environment</h2>
+        <p>As part of the *Red One* movie’s main ad campaign, Amazon/MGM approached us to create an immersive augmented reality (AR) experience. The result? Players can shoot snowmen with lasers and rack up points in a fun, interactive game. This was one of the first major ad campaigns to feature Snapchat’s new <strong>Leaderboard</strong> feature, bringing the *Red One* movie's characters into users' real-world environments, while also pushing the limits of AR technology. The 3D modeling for the snowmen was a creative challenge that allowed us to integrate Hollywood movie characters in an entirely new way.</p>
+    </section>
+
+    <section id="experience" class="section">
+        <h2>✨ Experience</h2>
+
+        <div class="sub-section">
+            <h3>🎮 Gameplay Mechanics</h3>
+            <p>The gameplay is all about shooting snowmen with lasers and gaining points for each successful shot. Players can hit the body or head of snowmen, each with different health points and visual effects triggered based on where they’re hit:</p>
+            <ul>
+                <li>✅ <strong>Shooting Snowmen:</strong> Players use lasers to shoot snowmen that spawn in their environment.</li>
+                <li>✅ <strong>Score System:</strong> Players score points for hitting the snowmen’s body (25 points) or head (50 points).</li>
+                <li>✅ <strong>Snowman Respawn:</strong> When a snowman is defeated, it respawns after a short delay, keeping the game challenging.</li>
+            </ul>
+          <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/redone_placeholder-fullspan-min.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMvcmVkb25lX3BsYWNlaG9sZGVyLWZ1bGxzcGFuLW1pbi5qcGciLCJpYXQiOjE3MzkzOTAxMzksImV4cCI6MTc3MDkyNjEzOX0.5ThCL-NE9K9pkX7YkVU0CAuqXxJ0eVf12dTs60JmjVg" alt="Experience Flow">
+        </div>
+
+        <div class="sub-section">
+            <h3>⚡ Real-Time Effects & Audio</h3>
+            <ul>
+                <li>🎯 <strong>Laser Shooting:</strong> A dynamic laser effect plays when the player shoots a snowman.</li>
+                <li>🎧 <strong>Audio Integration:</strong> Background music from *Red One* adds an extra layer of immersion, with sound effects for each action in the game.</li>
+                <li>🌨️ <strong>Particle Effects:</strong> Snow particles are generated when snowmen are hit or destroyed, enhancing the visual experience.</li>
+            </ul>
+<img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/redone_placeholder-fullspan-min.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMvcmVkb25lX3BsYWNlaG9sZGVyLWZ1bGxzcGFuLW1pbi5qcGciLCJpYXQiOjE3MzkzOTAxMzksImV4cCI6MTc3MDkyNjEzOX0.5ThCL-NE9K9pkX7YkVU0CAuqXxJ0eVf12dTs60JmjVg" alt="Experience Flow">
+        </div>
+
+        <div class="sub-section">
+            <h3>🎯 Shooting Snowmen</h3>
+            <ol>
+                <li>👾 <strong>Intro:</strong> Players tap to start the game and receive basic instructions.</li>
+                              <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/krampus-min.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMva3JhbXB1cy1taW4ucG5nIiwiaWF0IjoxNzM5Mzg0Mzc0LCJleHAiOjE3NzA5MjAzNzR9.xiYTcjLdRuzsCJTCLdV_Sc_Oh8j_lBxhU5Mmk5IOOSI" alt="Intro Example">
+                <li>📊 <strong>Gameplay:</strong> Snowmen appear at random intervals and the player must shoot them before they disappear.</li>
+                             <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/krampus-min.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMva3JhbXB1cy1taW4ucG5nIiwiaWF0IjoxNzM5Mzg0Mzc0LCJleHAiOjE3NzA5MjAzNzR9.xiYTcjLdRuzsCJTCLdV_Sc_Oh8j_lBxhU5Mmk5IOOSI" alt="Intro Example">
+                <li>💥 <strong>Reaction:</strong> Snowmen react differently based on where they are hit, with dynamic visual and audio feedback.</li>
+                                <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/krampus-min.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMva3JhbXB1cy1taW4ucG5nIiwiaWF0IjoxNzM5Mzg0Mzc0LCJleHAiOjE3NzA5MjAzNzR9.xiYTcjLdRuzsCJTCLdV_Sc_Oh8j_lBxhU5Mmk5IOOSI" alt="Intro Example">
+                <li>🎞️ <strong>Outro:</strong> The experience ends with a high score display and a chance to retry.</li>
+                            <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/krampus-min.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMva3JhbXB1cy1taW4ucG5nIiwiaWF0IjoxNzM5Mzg0Mzc0LCJleHAiOjE3NzA5MjAzNzR9.xiYTcjLdRuzsCJTCLdV_Sc_Oh8j_lBxhU5Mmk5IOOSI" alt="Intro Example">
+            </ol>
+        </div>
+    </section>
+
+    <section id="under-the-hood" class="section">
+        <h2>🛠️ Under the Hood</h2>
+
+        <div class="sub-section">
+            <h3>📦 Tech Stack</h3>
+            <ul>
+                <li>📱 <strong>Snapchat Lens Studio</strong> – Platform for building and deploying AR experiences on Snapchat.</li>
+                <li>🎮 <strong>3D Modeling</strong> – Snowmen models were designed for this AR experience, making it fun to bring the movie characters into users’ environments.</li>
+                <li>🎧 <strong>Audio Integration</strong> – Movie sound effects and immersive audio were used to enhance the gameplay experience.</li>
+                <li>🌨️ <strong>Particle Effects</strong> – Snow effects and hit reactions made the game feel more immersive.</li>
+            </ul>
+        </div>
+
+        <div class="sub-section">
+            <h3>🎶 Audio & Visual Assets</h3>
+            <p>We integrated movie assets to create a truly immersive experience:</p>
+            <ul>
+                <li>🔊 <strong>Movie Soundtrack</strong> – Dynamic music synchronized with the game actions.</li>
+                <li>🎥 <strong>Facial Transformations</strong> – Real-time snowball effects, including hit particles when the snowmen were shot.</li>
+            </ul>
+        </div>
+
+        <div class="sub-section">
+            <h3>⚙️ AR Game: Snowmen vs. Player</h3>
+            <ul>
+                <li>✅ <strong>Snowman Respawn</strong> – Defeated snowmen respawn, keeping the action going.</li>
+                <li>✅ <strong>Interactive Shooting</strong> – Players use a mobile device to shoot at snowmen in real-time AR.</li>
+                <li>✅ <strong>Leaderboard Feature</strong> – Integrating Snapchat's leaderboard feature to add competition among users.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="outcomes" class="section">
+        <h2>📊 Outcomes</h2>
+        <blockquote>"The *Snowball* AR experience brought *Red One* to life in a whole new way, engaging users and immersing them in the film’s world. By blending AR with the movie’s characters and storyline, we helped Amazon/MGM create an interactive and fun promotion that kept users coming back for more."</blockquote>
+      
+                <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/redone_placeholder-fullspan-min.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMvcmVkb25lX3BsYWNlaG9sZGVyLWZ1bGxzcGFuLW1pbi5qcGciLCJpYXQiOjE3MzkzOTAxMzksImV4cCI6MTc3MDkyNjEzOX0.5ThCL-NE9K9pkX7YkVU0CAuqXxJ0eVf12dTs60JmjVg" alt="Experience Flow">
+    </section>
+
+    <section id="credits" class="section">
+        <h2>🎖️ Credits</h2>
+        <ul>
+            <li>📌 <strong>Creative Director:</strong> Tyler Newman (Unfold Agency)</li>
+            <li>📌 <strong>Lead Developer:</strong> Zack Pennachi</li>
+            <li>📌 <strong>Audio/Visual Designer:</strong> Zack Pennachi</li>
+            <li>📌 <strong>Snapchat Lens Specialist:</strong> Unfold Agency</li>
+        </ul>
+    </section>
+
+    <!-- More Work Section -->
+    <section id="more-work" class="section">
+        <h2>📚 More Work</h2>
+        <p>Explore other projects we've worked on:</p>
+        <div class="case-studies">
+            <a href="case-study1.html" class="case-study-link">
+                <div class="case-study">
+                    <h3>Case Study 1</h3>
+                    <p>Brief description of case study 1...</p>
+                </div>
+            </a>
+            <a href="case-study2.html" class="case-study-link">
+                <div class="case-study">
+                    <h3>Case Study 2</h3>
+                    <p>Brief description of case study 2...</p>
+                </div>
+            </a>
+            <a href="case-study3.html" class="case-study-link">
+                <div class="case-study">
+                    <h3>Case Study 3</h3>
+                    <p>Brief description of case study 3...</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>
