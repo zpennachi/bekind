@@ -1,0 +1,324 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Case Study - Red One AR Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Doto:wght@100..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: "Anonymous Pro", serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+section {
+  margin-bottom: 64px;
+}
+
+.sub-section {
+  margin-bottom: 64px;
+}
+        .anonymous-pro-regular {
+            font-family: "Anonymous Pro", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .anonymous-pro-bold {
+            font-family: "Anonymous Pro", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+        .anonymous-pro-regular-italic {
+            font-family: "Anonymous Pro", serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+        .anonymous-pro-bold-italic {
+            font-family: "Anonymous Pro", serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+        .silkscreen-regular {
+            font-family: "Doto", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .silkscreen-bold {
+            font-family: "Doto", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .section {
+            padding: 60px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-family: "Silkscreen", serif;
+        }
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-family: "doto", serif;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 20px 0;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        img.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        blockquote {
+            font-size: 1.2rem;
+            font-style: italic;
+            background: #e0e0e0;
+            padding: 20px;
+            border-left: 5px solid #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            font-size: 1rem;
+           
+        }
+        pre {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            overflow-x: auto;
+            border-radius: 5px;
+        }
+.doto-<uniquifier> {
+  font-family: "Doto", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 0;
+}
+
+
+#more-work {
+    background-color: #fff;
+    text-align: center;
+    padding: 60px 10%;
+}
+
+#more-work h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: "Silkscreen", serif;
+}
+
+#more-work p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.case-studies {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.case-study-link {
+    text-decoration: none;
+    color: inherit;
+    width: 250px;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-study-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.case-study h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: "Doto", serif;
+}
+
+.case-study p {
+    font-size: 1rem;
+    color: #777;
+}
+</style>
+ 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll(".section");
+            const images = document.querySelectorAll("img");
+            
+            function revealOnScroll() {
+                sections.forEach(section => {
+                    if (section.getBoundingClientRect().top < window.innerHeight * 0.85) {
+                        section.classList.add("visible");
+                    }
+                });
+                images.forEach(img => {
+                    if (img.getBoundingClientRect().top < window.innerHeight * 0.85) {
+                        img.classList.add("visible");
+                    }
+                });
+            }
+            
+            revealOnScroll();
+            window.addEventListener("scroll", revealOnScroll);
+        });
+    </script>
+</head>
+<body>
+
+    <section id="context" class="section">
+        <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/redone_placeholder-fullspan-min.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMvcmVkb25lX3BsYWNlaG9sZGVyLWZ1bGxzcGFuLW1pbi5qcGciLCJpYXQiOjE3MzkzOTAxMzksImV4cCI6MTc3MDkyNjEzOX0.5ThCL-NE9K9pkX7YkVU0CAuqXxJ0eVf12dTs60JmjVg" alt="Experience Flow">
+        <h2>🎬 Exploding Boxes: AR Experience for Amazon's *Red One*</h2>
+        <p>As part of the *Red One* movie's promotion, Amazon/MGM launched a groundbreaking AR experience where users could scan a QR code on 1 million Amazon boxes. Upon scanning, the box would "explode" into a flurry of snow, with characters from the film bursting out alongside an immersive interactive experience. The experience also included a <strong>Naughty or Nice</strong> game, where players could determine their fate by interacting with the film's characters, all powered by <strong>8th Wall</strong> and <strong>A-Frame</strong>.</p>
+    </section>
+
+    <section id="experience" class="section">
+        <h2>✨ Experience</h2>
+
+        <div class="sub-section">
+            <h3>🎮 Interactive Gameplay</h3>
+            <p>The experience combines physical interaction with augmented reality. Upon scanning the Amazon box, users watch as the box explodes and the characters of *Red One* appear in their environment. Key features include:</p>
+            <ul>
+                <li>✅ <strong>Explosive Box Animation:</strong> The box comes to life, bursting with snow and characters.</li>
+                <li>✅ <strong>Character Interactions:</strong> Players can engage with characters as they explode out of the box.</li>
+                <li>✅ <strong>Naughty or Nice Game:</strong> Users decide if they are naughty or nice, influencing the outcome of the experience.</li>
+            </ul>
+            <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/krampus-min.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMva3JhbXB1cy1taW4ucG5nIiwiaWF0IjoxNzM5Mzg0Mzc0LCJleHAiOjE3NzA5MjAzNzR9.xiYTcjLdRuzsCJTCLdV_Sc_Oh8j_lBxhU5Mmk5IOOSI" alt="Intro Example">
+        </div>
+
+        <div class="sub-section">
+            <h3>⚡ Real-Time Effects & Audio</h3>
+            <ul>
+                <li>🔊 <strong>Movie Audio Integration:</strong> *Red One* soundtrack and sound effects immerse users in the experience.</li>
+                <li>❄️ <strong>Snow Effects:</strong> Snow particles explode out of the box, adding a realistic and exciting touch to the AR experience.</li>
+                <li>🎯 <strong>Naughty or Nice Interaction:</strong> A dynamic and interactive outcome where users decide their fate with the characters.</li>
+            </ul>
+            <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/snow-explosion.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tqb2N1Z3NtbG9iYW5kZG9sb2dyYW0uY29tL25vdGFsbGlmZy5qcGciLCJpYXQiOjE3MzkzOTAxMzksImV4cCI6MTc3MDkyNjEzOX0.xa8i44zJ1lglhLkqx0VrLCEcKAsCO0MlgG58Xqa9pA4" alt="Snow Explosion Effects">
+        </div>
+
+        <div class="sub-section">
+            <h3>🎯 Naughty or Nice Interaction</h3>
+            <ol>
+                <li>💥 <strong>Explosion of Snowmen:</strong> As the box explodes, snowmen characters from *Red One* burst out into the environment.</li>
+                <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/krampus-min.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMva3JhbXB1cy1taW4ucG5nIiwiaWF0IjoxNzM5Mzg0Mzc0LCJleHAiOjE3NzA5MjAzNzR9.xiYTcjLdRuzsCJTCLdV_Sc_Oh8j_lBxhU5Mmk5IOOSI" alt="Character Explosion">
+                <li>💡 <strong>Title Card & CTA:</strong> A title card appears, followed by a CTA to buy tickets for the movie.</li>
+                <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/nice-or-naughty-titlecard.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tqb2N1Z3NtbG9iYW5kZG9sb2dyYW0uY29tL25vdGFsbGlmZy5qcGciLCJpYXQiOjE3MzkzOTAxMzksImV4cCI6MTc3MDkyNjEzOX0.xa8i44zJ1lglhLkqx0VrLCEcKAsCO0MlgG58Xqa9pA4" alt="Naughty or Nice Title Card">
+                <li>🎮 <strong>Interactive Outcome:</strong> Users are invited to participate in the *Naughty or Nice* experience, triggered by their interaction with the AR elements.</li>
+                <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/snow-explosion.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tqb2N1Z3NtbG9iYW5kZG9sb2dyYW0uY29tL25vdGFsbGlmZy5qcGciLCJpYXQiOjE3MzkzOTAxMzksImV4cCI6MTc3MDkyNjEzOX0.xa8i44zJ1lglhLkqx0VrLCEcKAsCO0MlgG58Xqa9pA4" alt="Game Interaction">
+            </ol>
+        </div>
+    </section>
+
+    <section id="under-the-hood" class="section">
+        <h2>🛠️ Under the Hood</h2>
+
+        <div class="sub-section">
+            <h3>📦 Tech Stack</h3>
+            <ul>
+                <li>🌐 <strong>8th Wall</strong> – Used for AR tracking and web deployment, creating a seamless experience between the real world and the virtual.</li>
+                <li>🎮 <strong>A-Frame</strong> – 3D rendering and animations powered by A-Frame.</li>
+                <li>🎥 <strong>Blender</strong> – 3D models for the snowmen were created in Blender, optimized for real-time AR interaction.</li>
+                <li>📊 <strong>Google Analytics</strong> – Track user actions and participation through the experience, including photo captures and interaction events.</li>
+            </ul>
+        </div>
+
+        <div class="sub-section">
+            <h3>🎶 Movie Audio & Visual Assets</h3>
+            <p>Official assets from *Red One* were integrated into the experience:</p>
+            <ul>
+                <li>🔊 <strong>Soundtrack:</strong> Key soundtrack pieces and sound effects were used to bring the AR experience to life.</li>
+                <li>🎥 <strong>Character Models:</strong> 3D models of the snowmen characters were designed in Blender to match the movie's aesthetic.</li>
+            </ul>
+        </div>
+
+        <div class="sub-section">
+            <h3>⚙️ Explosive AR Experience</h3>
+            <ul>
+                <li>✅ <strong>Interactive AR Boxes:</strong> The Amazon boxes explode with snow particles and characters from *Red One* when scanned.</li>
+                <li>✅ <strong>Seamless Animation & Effects:</strong> Character animations, snow explosions, and a CTA to buy tickets.</li>
+                <li>✅ <strong>Naughty or Nice Experience:</strong> Integrated into the AR, providing an interactive choice for the user.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="outcomes" class="section">
+        <h2>📊 Outcomes</h2>
+        <blockquote>"This *Red One* AR experience was one of the most engaging ad campaigns we've worked on, blending movie promotion with cutting-edge AR technology. The seamless interaction between the physical and virtual worlds generated a fun, viral moment, as millions of Amazon customers interacted with the experience."</blockquote>
+    </section>
+
+    <section id="credits" class="section">
+        <h2>🎖️ Credits</h2>
+        <ul>
+            <li>📌 <strong>Creative Director:</strong> Tyler Newman (Unfold Agency)</li>
+            <li>📌 <strong>Lead Developer:</strong> Zack Pennachi</li>
+            <li>📌 <strong>3D Artist:</strong> Zack Pennachi</li>
+            <li>📌 <strong>Sound Design:</strong> Unfold Agency</li>
+        </ul>
+    </section>
+
+    <!-- More Work Section -->
+    <section id="more-work" class="section">
+        <h2>📚 More Work</h2>
+        <p>Explore other projects we've worked on:</p>
+        <div class="case-studies">
+            <a href="case-study1.html" class="case-study-link">
+                <div class="case-study">
+                    <h3>Case Study 1</h3>
+                    <p>Brief description of case study 1...</p>
+                </div>
+            </a>
+            <a href="case-study2.html" class="case-study-link">
+                <div class="case-study">
+                    <h3>Case Study 2</h3>
+                    <p>Brief description of case study 2...</p>
+                </div>
+            </a>
+            <a href="case-study3.html" class="case-study-link">
+                <div class="case-study">
+                    <h3>Case Study 3</h3>
+                    <p>Brief description of case study 3...</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>
