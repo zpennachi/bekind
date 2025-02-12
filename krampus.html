@@ -1,0 +1,384 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Case Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Doto:wght@100..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+  <style>
+    
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: "Anonymous Pro", serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+section {
+  margin-bottom: 64px;
+}
+
+.sub-section {
+  margin-bottom: 64px;
+}
+        .anonymous-pro-regular {
+            font-family: "Anonymous Pro", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .anonymous-pro-bold {
+            font-family: "Anonymous Pro", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+        .anonymous-pro-regular-italic {
+            font-family: "Anonymous Pro", serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+        .anonymous-pro-bold-italic {
+            font-family: "Anonymous Pro", serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+        .silkscreen-regular {
+            font-family: "Doto", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .silkscreen-bold {
+            font-family: "Doto", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .section {
+            padding: 60px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-family: "Silkscreen", serif;
+        }
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-family: "doto", serif;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 20px 0;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        img.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        blockquote {
+            font-size: 1.2rem;
+            font-style: italic;
+            background: #e0e0e0;
+            padding: 20px;
+            border-left: 5px solid #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            font-size: 1rem;
+           
+        }
+        pre {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            overflow-x: auto;
+            border-radius: 5px;
+        }
+.doto-<uniquifier> {
+  font-family: "Doto", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 0;
+}
+
+
+#more-work {
+    background-color: #fff;
+    text-align: center;
+    padding: 60px 10%;
+}
+
+#more-work h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: "Silkscreen", serif;
+}
+
+#more-work p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.case-studies {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.case-study-link {
+    text-decoration: none;
+    color: inherit;
+    width: 250px;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-study-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.case-study h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: "Doto", serif;
+}
+
+.case-study p {
+    font-size: 1rem;
+    color: #777;
+}
+
+    
+  </style>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll(".section");
+            const images = document.querySelectorAll("img");
+            
+            function revealOnScroll() {
+                sections.forEach(section => {
+                    if (section.getBoundingClientRect().top < window.innerHeight * 0.85) {
+                        section.classList.add("visible");
+                    }
+                });
+                images.forEach(img => {
+                    if (img.getBoundingClientRect().top < window.innerHeight * 0.85) {
+                        img.classList.add("visible");
+                    }
+                });
+            }
+            
+            revealOnScroll();
+            window.addEventListener("scroll", revealOnScroll);
+        });
+    </script>
+</head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Case Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Doto:wght@100..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+ 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll(".section");
+            const images = document.querySelectorAll("img");
+            
+            function revealOnScroll() {
+                sections.forEach(section => {
+                    if (section.getBoundingClientRect().top < window.innerHeight * 0.85) {
+                        section.classList.add("visible");
+                    }
+                });
+                images.forEach(img => {
+                    if (img.getBoundingClientRect().top < window.innerHeight * 0.85) {
+                        img.classList.add("visible");
+                    }
+                });
+            }
+            
+            revealOnScroll();
+            window.addEventListener("scroll", revealOnScroll);
+        });
+    </script>
+</head>
+<body>
+    <section id="context" class="section">
+      
+                            <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/redone_placeholder-fullspan-min.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMvcmVkb25lX3BsYWNlaG9sZGVyLWZ1bGxzcGFuLW1pbi5qcGciLCJpYXQiOjE3MzkzOTAxMzksImV4cCI6MTc3MDkyNjEzOX0.5ThCL-NE9K9pkX7YkVU0CAuqXxJ0eVf12dTs60JmjVg" alt="Experience Flow">
+        <h2>🎬 Interactive Slap Fight, For a Hollywood Blockbuster</h2>
+        <p>Amazon/MGM and AMC approached us with a unique challenge: to bring the main character of their Christmas blockbuster, <strong>Red One</strong>, into an interactive 3D experience deployed <strong>entirely in-browser</strong>. Given the need for seamless cross-device functionality and high visual fidelity, <strong>8th Wall</strong> and <strong>A-Frame</strong> were the ideal choices. The result? A <strong>high-energy WebAR experience</strong> where users could interact with Krampus in a <strong>fully immersive, gamified way</strong>.</p>
+    </section>
+
+    <section id="experience" class="section">
+        <h2>✨ Experience</h2>
+
+        <div class="sub-section">
+            <h3>🎥 Visuals & Motion</h3>
+            <p>The experience was designed with fluid motion and cinematic quality. We ensured:</p>
+            <ul>
+                <li>✅ <strong>High-quality pre-rendered animations</strong> for smooth performance.</li>
+                <li>✅ <strong>Seamless UI/3D transitions</strong> powered by A-Frame.</li>
+                <li>✅ <strong>Real-time physics interactions</strong> for dynamic reactions.</li>
+            </ul>
+            <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/krampus-min.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMva3JhbXB1cy1taW4ucG5nIiwiaWF0IjoxNzM5Mzg0Mzc0LCJleHAiOjE3NzA5MjAzNzR9.xiYTcjLdRuzsCJTCLdV_Sc_Oh8j_lBxhU5Mmk5IOOSI" alt="Visual Example">
+        </div>
+
+        <div class="sub-section">
+            <h3>⚡ Quick Explainers</h3>
+            <ul>
+                <li>🎯 <strong>The Slap Mechanic:</strong> Users slap Krampus with perfect timing.</li>
+                <li>😂 <strong>Reaction Feedback:</strong> Krampus reacts differently depending on timing.</li>
+                <li>🎬 <strong>Outro Sequence:</strong> A theatrical ending ties everything together.</li>
+                <li>🎟️ <strong>Buy Tickets CTA:</strong> Users can purchase tickets directly from the experience.</li>
+            </ul>
+            <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/redone_placeholder-fullspan-min.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMvcmVkb25lX3BsYWNlaG9sZGVyLWZ1bGxzcGFuLW1pbi5qcGciLCJpYXQiOjE3MzkzOTAxMzksImV4cCI6MTc3MDkyNjEzOX0.5ThCL-NE9K9pkX7YkVU0CAuqXxJ0eVf12dTs60JmjVg" alt="Quick Explanation">
+        </div>
+
+        <div class="sub-section">
+            <h3>🕹️ Start-to-Finish Experience</h3>
+            <ol>
+                <li>👋 <strong>Intro:</strong> Users tap ‘Start’ to begin.</li>
+                <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/krampus-min.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMva3JhbXB1cy1taW4ucG5nIiwiaWF0IjoxNzM5Mzg0Mzc0LCJleHAiOjE3NzA5MjAzNzR9.xiYTcjLdRuzsCJTCLdV_Sc_Oh8j_lBxhU5Mmk5IOOSI" alt="Intro Example">
+                <li>📊 <strong>Gameplay:</strong> A meter animation challenges users to time their slap.</li>
+                <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/krampus-min.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMva3JhbXB1cy1taW4ucG5nIiwiaWF0IjoxNzM5Mzg0Mzc0LCJleHAiOjE3NzA5MjAzNzR9.xiYTcjLdRuzsCJTCLdV_Sc_Oh8j_lBxhU5Mmk5IOOSI" alt="Gameplay Example">
+                <li>💥 <strong>Reaction:</strong> Krampus reacts differently depending on the score.</li>
+                <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/krampus-min.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMva3JhbXB1cy1taW4ucG5nIiwiaWF0IjoxNzM5Mzg0Mzc0LCJleHAiOjE3NzA5MjAzNzR9.xiYTcjLdRuzsCJTCLdV_Sc_Oh8j_lBxhU5Mmk5IOOSI" alt="Reaction Example">
+                <li>🎞️ <strong>Outro:</strong> The scene transitions into a final animation + ticket CTA.</li>
+                <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/krampus-min.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMva3JhbXB1cy1taW4ucG5nIiwiaWF0IjoxNzM5Mzg0Mzc0LCJleHAiOjE3NzA5MjAzNzR9.xiYTcjLdRuzsCJTCLdV_Sc_Oh8j_lBxhU5Mmk5IOOSI" alt="Outro Example">
+            </ol>
+            <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/redone_placeholder-fullspan-min.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMvcmVkb25lX3BsYWNlaG9sZGVyLWZ1bGxzcGFuLW1pbi5qcGciLCJpYXQiOjE3MzkzOTAxMzksImV4cCI6MTc3MDkyNjEzOX0.5ThCL-NE9K9pkX7YkVU0CAuqXxJ0eVf12dTs60JmjVg" alt="Experience Flow">
+        </div>
+    </section>
+
+    <section id="under-the-hood" class="section">
+        <h2>🛠️ Under the Hood</h2>
+
+        <div class="sub-section">
+            <h3>📦 Tech Stack</h3>
+            <ul>
+                <li>🌍 <strong>8th Wall</strong> – WebAR tracking & deployment.</li>
+                <li>🎮 <strong>A-Frame</strong> – 3D rendering & animations.</li>
+                <li>🎨 <strong>Blender</strong> – 3D asset creation, optimization & compression.</li>
+                <li>📊 <strong>Google Analytics</strong> – Event tracking & conversion monitoring.</li>
+            </ul>
+        </div>
+
+        <div class="sub-section">
+            <h3>🎶 Licensed Audio & Visual Assets</h3>
+            <p>We integrated <strong>official movie assets</strong> to create a truly immersive experience:</p>
+            <ul>
+                <li>🔊 <strong>Authentic Krampus Voice Lines</strong> – Official studio-quality voice recordings, with different lines triggered dynamically based on gameplay.</li>
+                <li>🎼 <strong>Movie Soundtrack & Sound Effects</strong> – Key sound effects and background music from *Red One* for added intensity.</li>
+                <li>🎥 <strong>Movie-Grade Visuals</strong> – The 3D Krampus model was designed to closely match the film’s character while remaining optimized for WebAR.</li>
+            </ul>
+        </div>
+
+        <div class="sub-section">
+            <h3>⚙️ 3D Krampus Model: Balancing Fidelity & Performance</h3>
+          
+                      <img src="https://sgvcogsjbwyfdvepalzf.supabase.co/storage/v1/object/sign/case-studies/unfold/Krampus/redone_placeholder-fullspan-min.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjYXNlLXN0dWRpZXMvdW5mb2xkL0tyYW1wdXMvcmVkb25lX3BsYWNlaG9sZGVyLWZ1bGxzcGFuLW1pbi5qcGciLCJpYXQiOjE3MzkzOTAxMzksImV4cCI6MTc3MDkyNjEzOX0.5ThCL-NE9K9pkX7YkVU0CAuqXxJ0eVf12dTs60JmjVg" alt="Experience Flow">
+          
+            <ul>
+                <li>✅ <strong>Optimized Poly Count</strong> – Reduced complexity while maintaining high detail.</li>
+                <li>✅ <strong>Efficient Rigging & Animations</strong> – Pre-rendered and blended animations for smooth transitions.</li>
+                <li>✅ <strong>Compressed Textures & Shaders</strong> – Optimized for fast loading and real-time rendering.</li>
+                <li>✅ <strong>Real-Time Animation Transitions</strong> – Event-driven animation blending for seamless interactions.</li>
+            </ul>
+            <pre><code>function setAnimationClip(clipName, loop = 'once') {
+    if (krampusModel) {
+        krampusModel.setAttribute('animation-mixer', `clip: ${clipName}; loop: ${loop}; timeScale: 1`);
+        console.log(`Set animation clip to: ${clipName} with loop: ${loop}`);
+    } else {
+        console.warn('Krampus model not available for setting animation.');
+    }
+}</code></pre>
+        </div>
+    </section>
+
+    <section id="outcomes" class="section">
+        <h2>📊 Outcomes</h2>
+        <blockquote>"This experience was a fantastic way to bridge interactive storytelling and blockbuster promotion. The seamless execution between animation, user input, and tracking helped us create something truly engaging."</blockquote>
+    </section>
+
+    <section id="credits" class="section">
+        <h2>🎖️ Credits</h2>
+        <ul>
+            <li>📌 <strong>Executive Producer:</strong> Tyler Newman (Unfold Agency)</li>
+            <li>📌 <strong>Lead Producer:</strong> Candy Moo (Unfold Agency)</li>
+            <li>📌 <strong>Lead UI/UX Designer:</strong> Darrin Isono (Unfold Agency)</li>
+            <li>📌 <strong>Lead Creative Developer:</strong> Zack Pennachi</li>
+            <li>📌 <strong>3D Designer:</strong> Zack Pennachi</li>
+            <li>📌 <strong>Full Stack Developer:</strong> Zack Pennachi</li>
+        </ul>
+    </section>
+
+    <!-- More Work Section -->
+    <section id="more-work" class="section">
+        <h2>👽 Other Experiences</h2>
+        <p>Explore other projects i've worked on:</p>
+        <div class="case-studies">
+            <a href="case-study1.html" class="case-study-link">
+                <div class="case-study">
+                    <h3>Case Study 1</h3>
+                    <p>Brief description of case study 1...</p>
+                </div>
+            </a>
+            <a href="case-study2.html" class="case-study-link">
+                <div class="case-study">
+                    <h3>Case Study 2</h3>
+                    <p>Brief description of case study 2...</p>
+                </div>
+            </a>
+            <a href="case-study3.html" class="case-study-link">
+                <div class="case-study">
+                    <h3>Case Study 3</h3>
+                    <p>Brief description of case study 3...</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+</body>
+</html>
+
+</html>
