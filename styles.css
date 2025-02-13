@@ -82,43 +82,74 @@ model-viewer {
   font-size: 12px;
   margin-bottom: 10px;
 }
-
-/* Recent Work Toggle */
-.recent-work {
-  cursor: pointer;
-  font-weight: bold;
-  font-family: "Silkscreen", sans-serif;
-  font-size: 14px;
-  display: inline-block;
-  padding: 5px 10px;
-  background: black;
-  color: white;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-/* Recent Work List */
+/* Smooth Animation for Recent Work Dropdown */
 .recent-work-list {
   list-style: none;
   padding: 0;
   margin: 10px 0 0;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.3s ease-in-out;
 }
 
+/* Expand Animation */
+.recent-work-list.open {
+  max-height: 200px; /* Adjust if needed */
+  opacity: 1;
+}
+
+/* Recent Work Hover Effect */
 .recent-work-list li {
+  position: relative;
   margin: 5px 0;
+  height: 20px; /* Keeps list height stable */
+  overflow: hidden;
 }
 
+/* Normal link appearance */
 .recent-work-list a {
   text-decoration: none;
   color: black;
   font-family: "Noto Sans", sans-serif;
   font-size: 12px;
+  display: block;
+  transition: opacity 0.2s ease-in-out;
 }
 
-.recent-work-list a:hover {
-  text-decoration: underline;
+/* Hidden marquee text (initially) */
+.recent-work-list .marquee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: none;
+  font-size: 12px;
+  color: black;
+  animation: marqueeScroll 5s linear infinite;
 }
+
+/* Show marquee on hover, hide the normal text */
+.recent-work-list li:hover a {
+  opacity: 0;
+}
+
+.recent-work-list li:hover .marquee {
+  display: block;
+}
+
+/* Marquee Animation */
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 
 /* Mobile Optimization */
 @media screen and (max-width: 768px) {
