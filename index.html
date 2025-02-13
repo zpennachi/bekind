@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +10,48 @@
 <body>
   <div class="container">
     <!-- Logo -->
-    <div class="top-left">
+    <div class="top-left"></div>
 
-    </div>
-
-<model-viewer src="https://uploads-ssl.webflow.com/64f5d91cdf7028173fc31b4f/6650d57cfebe58fb480532d2_4up.glb.txt" id=model-viewer ar poster="https://uploads-ssl.webflow.com/64f5d91cdf7028173fc31b4f/6650d6ccfdb22ece13f5d46f_Screenshot%202024-05-24%20140155%201-min.png" ar-modes="webxr scene-viewer quick-look"  camera-controls  auto-rotate interaction-prompt="none" min-field-of-view="16deg" interpolation-decay="300" max-field-of-view="16deg" >
- <div class="progress-bar hide" slot="progress-bar">
+    <!-- Model Viewer -->
+    <model-viewer 
+      src="https://uploads-ssl.webflow.com/64f5d91cdf7028173fc31b4f/6650d57cfebe58fb480532d2_4up.glb.txt" 
+      id="model-viewer" 
+      ar 
+      poster="https://uploads-ssl.webflow.com/64f5d91cdf7028173fc31b4f/6650d6ccfdb22ece13f5d46f_Screenshot%202024-05-24%20140155%201-min.png" 
+      ar-modes="webxr scene-viewer quick-look"  
+      camera-controls  
+      auto-rotate 
+      interaction-prompt="none" 
+      min-field-of-view="16deg" 
+      interpolation-decay="300" 
+      max-field-of-view="16deg">
+      
+      <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
-    </div>
-    <button slot="ar-button" id="ar-button">
+      </div>
+      
+      <button slot="ar-button" id="ar-button">
         View in your space
-    </button>
+      </button>
+    </model-viewer>
 
-</model-viewer>
-    
     <!-- Footer -->
     <div class="bottom-left">
-      <p class="email"><a href="mailto:your-email@example.com">hi@zpennachi.com</a></p>
-      <p class="quote">lets build something fun together :)</p>
+      <p class="email"><a href="mailto:hi@zpennachi.com">hi@zpennachi.com</a></p>
+      <p class="quote">let's build something fun together :)</p>
+
+      <!-- Recent Work Toggle -->
+      <p class="recent-work" id="recent-work-toggle">Recent Work ▼</p>
+      <ul class="recent-work-list" id="recent-work-list">
+        <li><a href="/krampus.html">Krampus Experience</a></li>
+        <li><a href="/snowmenattack.html">Snowmen Attack</a></li>
+        <li><a href="/naughtynice">Naughty or Nice</a></li>
+        <li><a href="/amazonboxexperience">Amazon Box Experience</a></li>
+      </ul>
     </div>
   </div>
 
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   <script src="scripts.js"></script>
 </body>
+</html>
