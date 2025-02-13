@@ -49,22 +49,19 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("recent-work-toggle");
   const list = document.getElementById("recent-work-list");
-  const body = document.body;
+  const container = document.querySelector(".container");
 
   toggle.addEventListener("click", () => {
     if (list.style.display === "block") {
       list.style.display = "none";
       toggle.textContent = "Recent Work ▼";
-      body.style.height = "95vh"; // Shrink height slightly when closed
+      container.style.height = "calc(100vh - 60px)"; // Shrink back to normal height
     } else {
       list.style.display = "block";
       toggle.textContent = "Recent Work ▲";
-      body.style.height = "100vh"; // Expand height when open
+      container.style.height = "100vh"; // Expand to full height without exceeding
     }
   });
-
-  // Ensure initial state is correct
-  body.style.height = "95vh"; // Set default height
 });
 
 
