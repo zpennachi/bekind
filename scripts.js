@@ -51,9 +51,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const list = document.getElementById("recent-work-list");
 
   toggle.addEventListener("click", () => {
-    list.classList.toggle("open"); // Add smooth animation
-    toggle.textContent = list.classList.contains("open") ? "Recent Work ▲" : "Recent Work ▼";
+    if (list.classList.contains("open")) {
+      list.style.maxHeight = "0px"; // Collapse the list
+      list.style.opacity = "0";
+      list.classList.remove("open");
+      toggle.textContent = "Recent Work ▼";
+    } else {
+      list.style.maxHeight = list.scrollHeight + "px"; // Expand the list
+      list.style.opacity = "1";
+      list.classList.add("open");
+      toggle.textContent = "Recent Work ▲";
+    }
   });
 });
+
 
 
