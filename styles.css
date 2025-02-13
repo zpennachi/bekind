@@ -5,40 +5,64 @@ body {
   color: black;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
   width: 100vw;
-  overflow: hidden; /* Prevents scrolling */
+  height: 100vh;
+  overflow: hidden;
   position: relative;
 }
 
-/* Model Viewer takes up full screen */
+/* Model Viewer Fullscreen */
 model-viewer {
   width: 100vw;
   height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0; /* Stays in the background */
+  z-index: 0;
 }
 
-/* Text Container (Ensures readability) */
+/* Marquee */
+.marquee-container {
+  width: 100vw;
+  background: black;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: "Silkscreen", sans-serif;
+  font-size: 14px;
+  padding: 5px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Text Container (Left-Aligned, Minimal) */
 .text-container {
-  width: 100%;
-  max-width: 600px; /* Keeps it from being too wide on large screens */
-  background-color: rgba(255, 255, 255, 0.95); /* White with slight transparency */
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 15px;
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10; /* Above the model-viewer */
-  text-align: center;
-  border-radius: 12px 12px 0 0; /* Rounded top corners */
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow at the top */
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Email & Quote */
@@ -46,7 +70,7 @@ model-viewer {
   color: black;
   text-decoration: none;
   font-family: "Doto", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .email a:hover {
@@ -55,8 +79,8 @@ model-viewer {
 
 .quote {
   font-family: "Sometype Mono", sans-serif;
+  font-size: 12px;
   margin-bottom: 10px;
-  font-size: 14px;
 }
 
 /* Recent Work Toggle */
@@ -64,13 +88,13 @@ model-viewer {
   cursor: pointer;
   font-weight: bold;
   font-family: "Silkscreen", sans-serif;
-  font-size: 16px;
-  margin-top: 10px;
+  font-size: 14px;
   display: inline-block;
   padding: 5px 10px;
   background: black;
   color: white;
   border-radius: 5px;
+  margin-top: 10px;
 }
 
 /* Recent Work List */
@@ -79,7 +103,6 @@ model-viewer {
   padding: 0;
   margin: 10px 0 0;
   display: none;
-  transition: opacity 0.3s ease-in-out;
 }
 
 .recent-work-list li {
@@ -90,31 +113,22 @@ model-viewer {
   text-decoration: none;
   color: black;
   font-family: "Noto Sans", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .recent-work-list a:hover {
   text-decoration: underline;
 }
 
-/* Mobile Optimizations */
+/* Mobile Optimization */
 @media screen and (max-width: 768px) {
   .text-container {
-    width: 90%;
-    max-width: 400px;
+    width: 200px;
     padding: 10px;
   }
-  
-model-viewer {
-  width: 90vw;
-  height: 90vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
+
   .email a, .quote, .recent-work {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .recent-work {
@@ -122,6 +136,6 @@ model-viewer {
   }
 
   .recent-work-list a {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
