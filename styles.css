@@ -28,14 +28,17 @@ model-viewer {
 /* Text Container (Ensures readability) */
 .text-container {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9); /* White with slight transparency */
-  padding: 20px;
+  max-width: 600px; /* Keeps it from being too wide on large screens */
+  background-color: rgba(255, 255, 255, 0.95); /* White with slight transparency */
+  padding: 15px;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10; /* Above the model-viewer */
   text-align: center;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow at top */
+  border-radius: 12px 12px 0 0; /* Rounded top corners */
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow at the top */
 }
 
 /* Email & Quote */
@@ -43,6 +46,7 @@ model-viewer {
   color: black;
   text-decoration: none;
   font-family: "Doto", sans-serif;
+  font-size: 16px;
 }
 
 .email a:hover {
@@ -52,6 +56,7 @@ model-viewer {
 .quote {
   font-family: "Sometype Mono", sans-serif;
   margin-bottom: 10px;
+  font-size: 14px;
 }
 
 /* Recent Work Toggle */
@@ -59,14 +64,20 @@ model-viewer {
   cursor: pointer;
   font-weight: bold;
   font-family: "Silkscreen", sans-serif;
+  font-size: 16px;
   margin-top: 10px;
+  display: inline-block;
+  padding: 5px 10px;
+  background: black;
+  color: white;
+  border-radius: 5px;
 }
 
 /* Recent Work List */
 .recent-work-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 10px 0 0;
   display: none;
   transition: opacity 0.3s ease-in-out;
 }
@@ -79,8 +90,30 @@ model-viewer {
   text-decoration: none;
   color: black;
   font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
 }
 
 .recent-work-list a:hover {
   text-decoration: underline;
+}
+
+/* Mobile Optimizations */
+@media screen and (max-width: 768px) {
+  .text-container {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+  }
+
+  .email a, .quote, .recent-work {
+    font-size: 14px;
+  }
+
+  .recent-work {
+    padding: 5px;
+  }
+
+  .recent-work-list a {
+    font-size: 12px;
+  }
 }
