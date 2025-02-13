@@ -1,56 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body { 
+body {
   font-family: Arial, sans-serif;
-  display: flex;
-  
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f4f4f4;
+  color: white;
+  background-color: black;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  width: 90%;
-  max-width: 1200px;
-  height: 75vh;
-  padding: 10px;
-}
-
-.top-left {
-  align-self: flex-start;
-}
-
-.logo {
-  max-width: 100px;
-  height: auto;
-}
-
-#model-viewer {
-  flex: 1;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  margin: 20px 0;
+  height: 100vh;
 }
 
 .bottom-left {
-  align-self: flex-start;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 
 .email a {
-  color: #555;
+  color: white;
   text-decoration: none;
-  font-weight: light;
 }
 
 .email a:hover {
@@ -59,6 +29,30 @@ body {
 
 .quote {
   margin-top: 5px;
-  font-size: 0.9rem;
-  color: #555;
+}
+
+.recent-work {
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.recent-work-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+.recent-work-list li {
+  margin: 5px 0;
+}
+
+.recent-work-list a {
+  text-decoration: none;
+  color: white;
+}
+
+.recent-work-list a:hover {
+  text-decoration: underline;
 }
