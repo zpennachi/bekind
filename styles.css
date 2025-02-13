@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Page Styles */
 body {
   font-family: "Noto Sans", sans-serif;
   background-color: white;
@@ -9,38 +9,35 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 95vh; /* Prevent unwanted scrolling initially */
-  transition: height 0.3s ease-in-out; /* Smooth height adjustment */
+  height: 100vh; /* Always fills the screen */
+  overflow: hidden; /* Prevents unwanted scrolling */
 }
 
-/* Model Viewer Fullscreen */
+/* Main Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 60px); /* Default height, making space for footer */
+  transition: height 0.3s ease-in-out;
+}
+
+/* Model Viewer should fill most of the screen */
 model-viewer {
   width: 90vw;
-  height: 80vh;
+  height: 75vh; /* Slightly smaller to leave room for footer */
   max-width: 1000px;
 }
-
-
 
 /* Footer Section */
 .bottom-left {
   text-align: center;
-  margin-top: 20px;
-}
-
-.email a {
-  color: black;
-  text-decoration: none;
-  font-family: "Doto", sans-serif;
-}
-
-.email a:hover {
-  text-decoration: underline;
-}
-
-.quote {
-  margin-top: 5px;
-  font-family: "Sometype Mono", sans-serif;
+  width: 100%;
+  position: absolute;
+  bottom: 10px; /* Keep it at the bottom */
+  transition: height 0.3s ease-in-out;
 }
 
 /* Recent Work Toggle */
@@ -56,6 +53,7 @@ model-viewer {
   padding: 0;
   margin: 0;
   display: none;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .recent-work-list li {
@@ -70,33 +68,4 @@ model-viewer {
 
 .recent-work-list a:hover {
   text-decoration: underline;
-}
-
-/* Font Classes */
-.silkscreen-regular {
-  font-family: "Silkscreen", sans-serif;
-  font-weight: 400;
-}
-
-.silkscreen-bold {
-  font-family: "Silkscreen", sans-serif;
-  font-weight: 700;
-}
-
-.doto {
-  font-family: "Doto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-}
-
-.noto-sans {
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-}
-
-.sometype-mono {
-  font-family: "Sometype Mono", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
 }
