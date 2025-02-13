@@ -51,13 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const list = document.getElementById("recent-work-list");
 
   toggle.addEventListener("click", () => {
-    if (list.style.display === "block") {
-      list.style.display = "none";
-      toggle.textContent = "Recent Work ▼";
-    } else {
-      list.style.display = "block";
-      toggle.textContent = "Recent Work ▲";
-    }
+    list.classList.toggle("open"); // Add smooth animation
+    toggle.textContent = list.classList.contains("open") ? "Recent Work ▲" : "Recent Work ▼";
   });
 });
 
