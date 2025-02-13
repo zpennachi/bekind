@@ -14,44 +14,42 @@
 </head>
 
 <body>
-  <div class="container">
-    <!-- Model Viewer -->
-    <model-viewer 
-      src="https://uploads-ssl.webflow.com/64f5d91cdf7028173fc31b4f/6650d57cfebe58fb480532d2_4up.glb.txt" 
-      id="model-viewer" 
-      ar 
-      poster="https://uploads-ssl.webflow.com/64f5d91cdf7028173fc31b4f/6650d6ccfdb22ece13f5d46f_Screenshot%202024-05-24%20140155%201-min.png" 
-      ar-modes="webxr scene-viewer quick-look"  
-      camera-controls  
-      auto-rotate 
-      interaction-prompt="none" 
-      min-field-of-view="16deg" 
-      interpolation-decay="300" 
-      max-field-of-view="16deg">
-      
-      <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
-      </div>
-      
-      <button slot="ar-button" id="ar-button">
-        View in your space
-      </button>
-    </model-viewer>
-
-    <!-- Footer -->
-    <div class="bottom-left">
-      <p class="email"><a href="mailto:hi@zpennachi.com">hi@zpennachi.com</a></p>
-      <p class="quote">let's build something fun together :)</p>
-
-      <!-- Recent Work Toggle -->
-      <p class="recent-work" id="recent-work-toggle">Recent Work ▼</p>
-      <ul class="recent-work-list" id="recent-work-list">
-        <li><a href="">Krampus Experience</a></li>
-        <li><a href="">Snowmen Attack</a></li>
-        <li><a href="">Naughty or Nice</a></li>
-        <li><a href="">Amazon Box Experience</a></li>
-      </ul>
+  <!-- Model Viewer (Full-screen background) -->
+  <model-viewer 
+    src="https://uploads-ssl.webflow.com/64f5d91cdf7028173fc31b4f/6650d57cfebe58fb480532d2_4up.glb.txt" 
+    id="model-viewer" 
+    ar 
+    poster="https://uploads-ssl.webflow.com/64f5d91cdf7028173fc31b4f/6650d6ccfdb22ece13f5d46f_Screenshot%202024-05-24%20140155%201-min.png" 
+    ar-modes="webxr scene-viewer quick-look"  
+    camera-controls  
+    auto-rotate 
+    interaction-prompt="none" 
+    min-field-of-view="16deg" 
+    interpolation-decay="300" 
+    max-field-of-view="16deg">
+    
+    <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
     </div>
+    
+    <button slot="ar-button" id="ar-button">
+      View in your space
+    </button>
+  </model-viewer>
+
+  <!-- Text Container (Overlayed for readability) -->
+  <div class="text-container">
+    <p class="email"><a href="mailto:hi@zpennachi.com">hi@zpennachi.com</a></p>
+    <p class="quote">let's build something fun together :)</p>
+
+    <!-- Recent Work Toggle -->
+    <p class="recent-work" id="recent-work-toggle">Recent Work ▼</p>
+    <ul class="recent-work-list" id="recent-work-list">
+      <li><a href="/krampus.html">Krampus Experience</a></li>
+      <li><a href="/snowmenattack.html">Snowmen Attack</a></li>
+      <li><a href="/naughtynice">Naughty or Nice</a></li>
+      <li><a href="/amazonboxexperience">Amazon Box Experience</a></li>
+    </ul>
   </div>
 
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
