@@ -6,16 +6,15 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-
+  height: 100dvh; /* Dynamic viewport height to avoid mobile UI issues */
+  overflow-y: auto; /* Allows slight scroll if needed */
   position: relative;
 }
 
 /* Model Viewer Fullscreen */
 model-viewer {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh; /* Adjusts dynamically */
   position: absolute;
   top: 0;
   left: 0;
@@ -126,6 +125,7 @@ model-viewer {
   .text-container {
     width: 200px;
     padding: 10px;
+    bottom: 10px; /* Moves it up slightly so it's not too close to the phone UI */
   }
 
   .email a, .quote, .recent-work {
