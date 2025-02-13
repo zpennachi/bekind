@@ -8,46 +8,60 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh; /* Always fills the screen */
-  overflow: hidden; /* Prevents unwanted scrolling */
+  justify-content: space-between;
+  height: 100vh; /* Keep everything inside the viewport */
+  overflow: hidden; /* Prevent scrolling */
 }
 
 /* Main Container */
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  height: calc(100vh - 60px); /* Default height, making space for footer */
-  transition: height 0.3s ease-in-out;
+  height: 75vh; /* Model viewer takes up most of the screen */
 }
 
-/* Model Viewer should fill most of the screen */
+/* Model Viewer */
 model-viewer {
   width: 90vw;
-  height: 75vh; /* Slightly smaller to leave room for footer */
+  height: 75vh;
   max-width: 1000px;
 }
 
 /* Footer Section */
-.bottom-left {
-  text-align: center;
+.bottom-section {
   width: 100%;
-  position: absolute;
-  bottom: 10px; /* Keep it at the bottom */
-  transition: height 0.3s ease-in-out;
+  text-align: center;
+  height: auto; /* Adjusts dynamically */
+  padding: 10px 0;
+}
+
+/* Email & Quote */
+.email a {
+  color: black;
+  text-decoration: none;
+  font-family: "Doto", sans-serif;
+}
+
+.email a:hover {
+  text-decoration: underline;
+}
+
+.quote {
+  font-family: "Sometype Mono", sans-serif;
 }
 
 /* Recent Work Toggle */
 .recent-work {
   cursor: pointer;
   font-weight: bold;
-  margin-top: 10px;
   font-family: "Silkscreen", sans-serif;
+  margin-top: 10px;
 }
 
+/* Recent Work List */
 .recent-work-list {
   list-style: none;
   padding: 0;
