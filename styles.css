@@ -105,7 +105,7 @@ model-viewer {
   position: relative;
   margin: 5px 0;
   height: 20px; /* Keeps list height stable */
-  overflow: hidden;
+  overflow: show;
 }
 
 /* Normal link appearance */
