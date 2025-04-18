@@ -85,7 +85,7 @@ model-viewer {
 /* Smooth Animation for Recent Work Dropdown */
 .recent-work-list {
   list-style: none;
- display: none; 
+ display: block; 
   padding: 0;
   margin: 10px 0 0;
   max-height: 0;
