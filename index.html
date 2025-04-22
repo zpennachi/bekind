@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,54 +6,48 @@
   <title>ZPennachi</title>
   <link href="https://fonts.googleapis.com/css2?family=Doto&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      font-family: "Doto", sans-serif;
-      overflow: hidden;
-    }
-    .bg {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain; /* Ensures entire image fits, centered */
-    }
-    .bg.desktop {
-      background-image: url('https://github.com/zpennachi/bekind/blob/main/desktop-image.jpg?raw=true');
-    }
-    .bg.mobile {
-      background-image: url('https://github.com/zpennachi/bekind/blob/main/mobile-image.jpg?raw=true');
-      display: none;
+      font-family: "Doto", sans-serif;
+      overflow-y: auto;
     }
 
+    .section {
+      width: 100%;
+      display: block;
+    }
+
+    .section img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Hide mobile images by default */
+    .mobile-img { display: none; }
+
+    /* Show mobile images and hide desktop images on smaller screens */
     @media (max-width: 768px) {
-      .bg.desktop { display: none; }
-      .bg.mobile { display: block; }
+      .desktop-img { display: none; }
+      .mobile-img { display: block; }
     }
 
-.email-link {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #333; /* dark text color for visibility */
-  text-decoration: none;
-  font-size: 1rem;
-  transition: opacity 0.3s ease-in-out;
-  cursor: pointer;
-  background: rgba(255,255,255,0.8); /* subtle white background for readability */
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-}
-
+    .email-link {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #333;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: opacity 0.3s ease-in-out;
+      cursor: pointer;
+      background: rgba(255,255,255,0.8);
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+      z-index: 10;
+    }
 
     .email-link span {
       transition: opacity 0.3s ease-in-out;
@@ -66,24 +56,30 @@
     .email-link .hover {
       opacity: 0;
       position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
+      left: 50%;
+      bottom: 0.4rem;
+      transform: translateX(-50%);
     }
 
-    .email-link:hover .default {
-      opacity: 0;
-    }
-
-    .email-link:hover .hover {
-      opacity: 1;
-    }
+    .email-link:hover .default { opacity: 0; }
+    .email-link:hover .hover { opacity: 1; }
   </style>
 </head>
 
 <body>
-  <div class="bg desktop"></div>
-  <div class="bg mobile"></div>
+  <!-- Hero Section -->
+  <div class="section">
+    <img src="https://github.com/zpennachi/bekind/blob/main/desktop-image.jpg?raw=true" class="desktop-img">
+    <img src="https://github.com/zpennachi/bekind/blob/main/mobile-image.jpg?raw=true" class="mobile-img">
+  </div>
+  
+  <div class="section">
+    <img src="https://github.com/zpennachi/bekind/blob/main/dark.jpg?raw=true" class="desktop-img">
+  </div>
+
+  <div class="section">
+    <img src="https://github.com/zpennachi/bekind/blob/main/close.jpg?raw=true" class="desktop-img">
+  </div>
 
   <a href="mailto:hi@zpennachi.com" class="email-link">
     <span class="default">let's build something fun together :)</span>
