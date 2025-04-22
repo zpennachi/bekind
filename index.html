@@ -1,73 +1,93 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>zpennachi</title>
+  <title>ZPennachi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Doto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: "Doto", sans-serif;
+      overflow: hidden;
+    }
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain; /* Ensures entire image fits, centered */
+    }
+    .bg.desktop {
+      background-image: url('https://github.com/zpennachi/bekind/blob/main/desktop-image.jpg?raw=true');
+    }
+    .bg.mobile {
+      background-image: url('https://github.com/zpennachi/bekind/blob/main/mobile-image.jpg?raw=true');
+      display: none;
+    }
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Silkscreen:wght@400;700&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    @media (max-width: 768px) {
+      .bg.desktop { display: none; }
+      .bg.mobile { display: block; }
+    }
 
-  <link rel="stylesheet" href="styles.css">
+.email-link {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #333; /* dark text color for visibility */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+  background: rgba(255,255,255,0.8); /* subtle white background for readability */
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+}
+
+
+    .email-link span {
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .email-link .hover {
+      opacity: 0;
+      position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+    }
+
+    .email-link:hover .default {
+      opacity: 0;
+    }
+
+    .email-link:hover .hover {
+      opacity: 1;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Marquee -->
-  <div class="marquee-container">
-    <div class="marquee">| Building | Learning | Having Fun :) </div>
-  </div>
+  <div class="bg desktop"></div>
+  <div class="bg mobile"></div>
 
-  <!-- Model Viewer (Full-screen background) -->
-  <model-viewer 
-    src="https://uploads-ssl.webflow.com/64f5d91cdf7028173fc31b4f/6650d57cfebe58fb480532d2_4up.glb.txt" 
-    id="model-viewer" 
-    ar 
-    poster="https://uploads-ssl.webflow.com/64f5d91cdf7028173fc31b4f/6650d6ccfdb22ece13f5d46f_Screenshot%202024-05-24%20140155%201-min.png" 
-    ar-modes="webxr scene-viewer quick-look"  
-    camera-controls  
-    auto-rotate 
-    interaction-prompt="none" 
-    min-field-of-view="16deg" 
-    interpolation-decay="300" 
-    max-field-of-view="16deg">
-    
-    <div class="progress-bar hide" slot="progress-bar">
-      <div class="update-bar"></div>
-    </div>
-    
-    <button slot="ar-button" id="ar-button">
-      View in your space
-    </button>
-  </model-viewer>
-
-  <!-- Left-Aligned Minimalist Text Box -->
-  <div class="text-container">
-    <p class="email"><a href="mailto:hi@zpennachi.com">hi@zpennachi.com</a></p>
-    <p class="url"><a href="https://thoughtful.fun">thoughtful.fun</a></p>
-
-
-    <!-- Recent Work Toggle -->
-    <p class="recent-work" id="recent-work-toggle">Check out my work :)</p>
-<ul class="recent-work-list" id="recent-work-list">
-  <li>
-    <a href="https://www.snapchat.com/lens/97c6de5796fa4b5299fcf23d049619e0?sender_web_id=846c12c5-53a6-471c-9fd3-5ba9f6a19140&device_type=desktop&is_copy_url=true">AR MGM Studios Experience</a>
-    <span class="marquee">3D Modeling, 3D Animation, 3D Texture/Materials, AR Dev, Particle Dev</span>
-  </li>
-  <li>
-    <a href="https://www.snapchat.com/lens/8903ff87b33f4cb2a05d321cbfc47b31?sender_web_id=82591c08-5988-438b-8229-1786c86408f0&device_type=desktop&is_copy_url=true">Naughty/Nice Snapchat MGM Studios</a>
-    <span class="marquee">3D Modeling, 3D Animation, 3D Texture/Materials, Game Dev, Particle Dev</span>
-  </li>
-  <li>
-    <a href="https://www.edgesoundresearch.com">Edge Sound Research</a>
-  <span class="marquee">UE 5, Product Renders, Realtime AR Dev, Quest 3 Dev</span>
-  </li>
-</ul>
-    <p class="quote">let's build something fun together :)</p>
-  </div>
-
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-  <script src="scripts.js"></script>
+  <a href="mailto:hi@zpennachi.com" class="email-link">
+    <span class="default">let's build something fun together :)</span>
+    <span class="hover">hi@zpennachi.com</span>
+  </a>
 </body>
 </html>
